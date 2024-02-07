@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
+import 'package:flutter/services.dart';
 import 'package:project4/expenses.dart';
 
 var kcolorscheme =
@@ -10,9 +10,9 @@ var kdarkcolorscheme = ColorScheme.fromSeed(
     seedColor: const Color.fromARGB(255, 5, 99, 125));
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])  // it lock device to be in landscape when we rotate it.
-  //     .then((value) => {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])  // it lock device to be in landscape when we rotate it.
+      .then((value) => {
   runApp(MaterialApp(
     darkTheme: ThemeData.dark().copyWith(
       colorScheme: kdarkcolorscheme,
@@ -45,5 +45,5 @@ void main() {
   ));
 }
           
-          //);
+          );
 
