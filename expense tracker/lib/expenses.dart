@@ -15,7 +15,7 @@ class Expenses extends StatefulWidget {
 
 class _ExpensesState extends State<Expenses> {
   final List<Expense> registerExpenses = [
-    Expense('Flutter Coarse', 40.99, DateTime.now(), Category.work),
+    Expense('Web Coarse', 40.99, DateTime.now(), Category.work),
     Expense('GYM', 50.99, DateTime.now(), Category.work)
   ];
 
@@ -37,7 +37,7 @@ class _ExpensesState extends State<Expenses> {
 
   void removeexpense(Expense expense) {
     final expenseindex = registerExpenses.indexOf(
-        expense); //indexof mean that if we deleted the expense and we want to undo the function it should be place on the right index like if we delted first expense and then second and if we first undo second the second expense should place to its index second not to first
+        expense); 
     setState(() {
       registerExpenses.remove(expense);
     });
