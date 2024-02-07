@@ -18,10 +18,7 @@ class Newexpense extends StatefulWidget {
 }
 
 class _NewexpenseState extends State<Newexpense> {
-  // var entertitle = "";
-  // void savetitleinput(String inputvalue) {
-  //   entertitle = inputvalue;
-  // }
+
   final titlecontroller = TextEditingController();
   final amountcontroller = TextEditingController();
   DateTime?
@@ -43,24 +40,7 @@ class _NewexpenseState extends State<Newexpense> {
   }
 
   void showDialogbox() {
-    // if (Platform.isIOS) {
-    //   showCupertinoDialog(
-    //       context: context,
-    //       builder: (ctx) {
-    //         return CupertinoAlertDialog(
-    //           title: const Text('invalid input'),
-    //           content: const Text(
-    //               'please make sure a valid title amount and category was entered!'),
-    //           actions: [
-    //             TextButton(
-    //                 onPressed: () {
-    //                   Navigator.pop(ctx);
-    //                 },
-    //                 child: const Text('OK!'))
-    //           ],
-    //         );
-    //       });
-    // } else {
+  
     showDialog(
         context: context,
         builder: (ctx) {
@@ -77,7 +57,7 @@ class _NewexpenseState extends State<Newexpense> {
             ],
           );
         });
-    //}
+    
   }
 
   void submitexpensedata() {
@@ -87,7 +67,7 @@ class _NewexpenseState extends State<Newexpense> {
     if (titlecontroller.text.trim().isEmpty ||
         amountisinvalid ||
         selecteddate == null) {
-      //show erroe message
+      //show error message
       showDialogbox();
 
       return;
